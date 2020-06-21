@@ -139,6 +139,7 @@
             this.btnDoi.TabIndex = 9;
             this.btnDoi.Text = "Đổi";
             this.btnDoi.UseVisualStyleBackColor = true;
+            this.btnDoi.Click += new System.EventHandler(this.btnDoi_Click);
             // 
             // btnThoat
             // 

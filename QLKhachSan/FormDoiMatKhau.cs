@@ -16,5 +16,10 @@ namespace QLKhachSan
         {
             InitializeComponent();
         }
+
+        private void btnDoi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

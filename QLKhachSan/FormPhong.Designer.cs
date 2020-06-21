@@ -51,6 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtTenLoai = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -106,30 +108,33 @@
             // 
             // btnXoaP
             // 
-            this.btnXoaP.Location = new System.Drawing.Point(236, 259);
+            this.btnXoaP.Location = new System.Drawing.Point(236, 269);
             this.btnXoaP.Name = "btnXoaP";
             this.btnXoaP.Size = new System.Drawing.Size(80, 33);
             this.btnXoaP.TabIndex = 6;
             this.btnXoaP.Text = "Xóa";
             this.btnXoaP.UseVisualStyleBackColor = true;
+            this.btnXoaP.Click += new System.EventHandler(this.btnXoaP_Click);
             // 
             // btnSuaP
             // 
-            this.btnSuaP.Location = new System.Drawing.Point(133, 259);
+            this.btnSuaP.Location = new System.Drawing.Point(130, 269);
             this.btnSuaP.Name = "btnSuaP";
             this.btnSuaP.Size = new System.Drawing.Size(80, 33);
             this.btnSuaP.TabIndex = 5;
             this.btnSuaP.Text = "Sửa";
             this.btnSuaP.UseVisualStyleBackColor = true;
+            this.btnSuaP.Click += new System.EventHandler(this.btnSuaP_Click);
             // 
             // btnThemP
             // 
-            this.btnThemP.Location = new System.Drawing.Point(31, 259);
+            this.btnThemP.Location = new System.Drawing.Point(31, 269);
             this.btnThemP.Name = "btnThemP";
             this.btnThemP.Size = new System.Drawing.Size(80, 33);
             this.btnThemP.TabIndex = 4;
             this.btnThemP.Text = "Thêm";
             this.btnThemP.UseVisualStyleBackColor = true;
+            this.btnThemP.Click += new System.EventHandler(this.btnThemP_Click);
             // 
             // dgvPhong
             // 
@@ -141,6 +146,7 @@
             this.dgvPhong.RowTemplate.Height = 24;
             this.dgvPhong.Size = new System.Drawing.Size(273, 237);
             this.dgvPhong.TabIndex = 3;
+            this.dgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellClick);
             // 
             // label3
             // 
@@ -173,6 +179,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.txtTenLoai);
             this.tabPage2.Controls.Add(this.txtGia);
             this.tabPage2.Controls.Add(this.txtSoNguoi);
             this.tabPage2.Controls.Add(this.txtMaLoai);
@@ -194,14 +202,14 @@
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(130, 200);
+            this.txtGia.Location = new System.Drawing.Point(130, 242);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(208, 27);
             this.txtGia.TabIndex = 10;
             // 
             // txtSoNguoi
             // 
-            this.txtSoNguoi.Location = new System.Drawing.Point(130, 149);
+            this.txtSoNguoi.Location = new System.Drawing.Point(130, 196);
             this.txtSoNguoi.Name = "txtSoNguoi";
             this.txtSoNguoi.Size = new System.Drawing.Size(208, 27);
             this.txtSoNguoi.TabIndex = 9;
@@ -215,16 +223,17 @@
             // 
             // btnXoaLP
             // 
-            this.btnXoaLP.Location = new System.Drawing.Point(256, 270);
+            this.btnXoaLP.Location = new System.Drawing.Point(256, 307);
             this.btnXoaLP.Name = "btnXoaLP";
             this.btnXoaLP.Size = new System.Drawing.Size(82, 33);
             this.btnXoaLP.TabIndex = 7;
             this.btnXoaLP.Text = "Xóa";
             this.btnXoaLP.UseVisualStyleBackColor = true;
+            this.btnXoaLP.Click += new System.EventHandler(this.btnXoaLP_Click);
             // 
             // btnSuaLP
             // 
-            this.btnSuaLP.Location = new System.Drawing.Point(151, 270);
+            this.btnSuaLP.Location = new System.Drawing.Point(152, 307);
             this.btnSuaLP.Name = "btnSuaLP";
             this.btnSuaLP.Size = new System.Drawing.Size(82, 33);
             this.btnSuaLP.TabIndex = 6;
@@ -233,12 +242,13 @@
             // 
             // btnThemLP
             // 
-            this.btnThemLP.Location = new System.Drawing.Point(40, 270);
+            this.btnThemLP.Location = new System.Drawing.Point(42, 307);
             this.btnThemLP.Name = "btnThemLP";
             this.btnThemLP.Size = new System.Drawing.Size(84, 33);
             this.btnThemLP.TabIndex = 5;
             this.btnThemLP.Text = "Thêm";
             this.btnThemLP.UseVisualStyleBackColor = true;
+            this.btnThemLP.Click += new System.EventHandler(this.btnThemLP_Click);
             // 
             // dgvLoaiPhong
             // 
@@ -250,11 +260,12 @@
             this.dgvLoaiPhong.RowTemplate.Height = 24;
             this.dgvLoaiPhong.Size = new System.Drawing.Size(270, 244);
             this.dgvLoaiPhong.TabIndex = 4;
+            this.dgvLoaiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiPhong_CellClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 203);
+            this.label7.Location = new System.Drawing.Point(38, 245);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 20);
             this.label7.TabIndex = 3;
@@ -263,7 +274,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 152);
+            this.label6.Location = new System.Drawing.Point(38, 199);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 2;
@@ -289,6 +300,22 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Loại Phòng";
             // 
+            // txtTenLoai
+            // 
+            this.txtTenLoai.Location = new System.Drawing.Point(130, 146);
+            this.txtTenLoai.Name = "txtTenLoai";
+            this.txtTenLoai.Size = new System.Drawing.Size(208, 27);
+            this.txtTenLoai.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(41, 149);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Tên Loại";
+            // 
             // FormPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -297,7 +324,7 @@
             this.ClientSize = new System.Drawing.Size(682, 433);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormPhong";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Phòng";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -335,5 +362,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTenLoai;
     }
 }

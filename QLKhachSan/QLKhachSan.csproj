@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -112,6 +121,28 @@
     <Compile Include="FormThuePhong.Designer.cs">
       <DependentUpon>FormThuePhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CHUCVU.cs" />
+    <Compile Include="Model\DAO\DataProvider.cs" />
+    <Compile Include="Model\DAO\DatPhongDao.cs" />
+    <Compile Include="Model\DAO\DichVuDao.cs" />
+    <Compile Include="Model\DAO\KHDao.cs" />
+    <Compile Include="Model\DAO\LoginDao.cs" />
+    <Compile Include="Model\DAO\MainDao.cs" />
+    <Compile Include="Model\DAO\NhanVienDao.cs" />
+    <Compile Include="Model\DAO\PhongDao.cs" />
+    <Compile Include="Model\DAO\ThietBiDao.cs" />
+    <Compile Include="Model\DAO\ThuePhongDao.cs" />
+    <Compile Include="Model\DATPHONG.cs" />
+    <Compile Include="Model\DICHVU.cs" />
+    <Compile Include="Model\HOADON.cs" />
+    <Compile Include="Model\KHACHHANG.cs" />
+    <Compile Include="Model\LOAIPHONG.cs" />
+    <Compile Include="Model\MyDataBase.cs" />
+    <Compile Include="Model\NHANVIEN.cs" />
+    <Compile Include="Model\PHONG.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
+    <Compile Include="Model\THIETBI.cs" />
+    <Compile Include="Model\THUEPHONG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormDatPhong.resx">
@@ -157,6 +188,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
