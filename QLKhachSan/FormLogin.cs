@@ -13,7 +13,8 @@ namespace QLKhachSan
 {
     public partial class FormLogin : Form
     {
-        public string tenDN;
+        public static string tenDN;
+        public static string matKhau;
         public FormLogin()
         {
             InitializeComponent();
@@ -24,9 +25,10 @@ namespace QLKhachSan
             bool c = new LoginDao().check(txtTenDN.Text, txtMatKhau.Text);
             if(c == true)
             {
-                this.Hide();
-                new FormMain().Show();
+                this.Hide();           
                 tenDN = txtTenDN.Text;
+                matKhau = txtMatKhau.Text;
+                new FormMain().Show();
             }
             else
             {

@@ -16,5 +16,6 @@ namespace QLKhachSan
         {
             InitializeComponent();
         }
+
     }
 }

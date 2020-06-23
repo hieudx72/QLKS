@@ -18,22 +18,40 @@ namespace QLKhachSan
         {
             InitializeComponent();
             MainDao md = new MainDao();
-            //lblTenDN.Text = tenDN;
+            lblTenDN.Text = FormLogin.tenDN;
             lblSPT.Text = md.loadSPT().ToString();
             lblSPDD.Text = md.loadSPDD().ToString();
             lblSPDT.Text = md.loadSPDT().ToString();
+            loadImage();
         }
 
+        public void loadImage()
+        {
+            DataTable dt = new MainDao().DSP();
+            foreach (DataRow row in dt.Rows)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = row["MaPhong"].ToString();
+                if (row["TinhTrang"].ToString().Equals("Trong"))
+                {
+                    item.ImageIndex = 0;
+                }
+                if (row["TinhTrang"].ToString().Equals("Da dat"))
+                {
+                    item.ImageIndex = 1;
+                }
+                if (row["TinhTrang"].ToString().Equals("Da thue"))
+                {
+                    item.ImageIndex = 2;
+                }
+                lvPhong.Items.Add(item);
+            }
+        }
         private void mnDoiMatKhau_Click(object sender, EventArgs e)
         {
             new FormDoiMatKhau().Show();
         }
-
-        private void mnKhachHang_Click(object sender, EventArgs e)
-        {
-            new FormKhachHang().Show();
-        }
-
+     
         private void mnDatPhong_Click(object sender, EventArgs e)
         {
             new FormDatPhong().Show();
@@ -76,7 +94,11 @@ namespace QLKhachSan
 
         private void mnDangXuat_Click(object sender, EventArgs e)
         {
-            this.Hide();
+        }
+
+        private void mnKhachHang_Click(object sender, EventArgs e)
+        {
+            new FormKhachHang().Show();
         }
     }
 }
