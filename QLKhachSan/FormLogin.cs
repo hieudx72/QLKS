@@ -15,6 +15,7 @@ namespace QLKhachSan
     {
         public static string tenDN;
         public static string matKhau;
+        public static string quyen;
         public FormLogin()
         {
             InitializeComponent();
@@ -22,13 +23,27 @@ namespace QLKhachSan
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            bool c = new LoginDao().check(txtTenDN.Text, txtMatKhau.Text);
+            LoginDao login = new LoginDao();
+            bool c = login.check(txtTenDN.Text, txtMatKhau.Text);
             if(c == true)
             {
                 this.Hide();           
                 tenDN = txtTenDN.Text;
                 matKhau = txtMatKhau.Text;
                 new FormMain().Show();
+
+                DataTable dt = login.quyen(tenDN);
+                DataRow dr = dt.Rows[0];
+                int d = Int32.Parse(dr["idChucVu"].ToString());
+                if(d == 1)
+                {
+                    quyen = "admin";
+                }
+                else
+                {
+                    quyen = "nhanvien";
+                }
+              
             }
             else
             {

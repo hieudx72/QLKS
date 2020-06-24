@@ -40,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTenLoai = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.txtSoNguoi = new System.Windows.Forms.TextBox();
             this.txtMaLoai = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTenLoai = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -200,6 +200,22 @@
             this.tabPage2.Text = "Quản Lý Loại Phòng";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(41, 149);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Tên Loại";
+            // 
+            // txtTenLoai
+            // 
+            this.txtTenLoai.Location = new System.Drawing.Point(130, 146);
+            this.txtTenLoai.Name = "txtTenLoai";
+            this.txtTenLoai.Size = new System.Drawing.Size(208, 27);
+            this.txtTenLoai.TabIndex = 11;
+            // 
             // txtGia
             // 
             this.txtGia.Location = new System.Drawing.Point(130, 242);
@@ -239,6 +255,7 @@
             this.btnSuaLP.TabIndex = 6;
             this.btnSuaLP.Text = "Sửa";
             this.btnSuaLP.UseVisualStyleBackColor = true;
+            this.btnSuaLP.Click += new System.EventHandler(this.btnSuaLP_Click);
             // 
             // btnThemLP
             // 
@@ -299,22 +316,6 @@
             this.label4.Size = new System.Drawing.Size(145, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Loại Phòng";
-            // 
-            // txtTenLoai
-            // 
-            this.txtTenLoai.Location = new System.Drawing.Point(130, 146);
-            this.txtTenLoai.Name = "txtTenLoai";
-            this.txtTenLoai.Size = new System.Drawing.Size(208, 27);
-            this.txtTenLoai.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(41, 149);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Tên Loại";
             // 
             // FormPhong
             // 

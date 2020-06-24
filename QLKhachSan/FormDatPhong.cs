@@ -16,6 +16,11 @@ namespace QLKhachSan
     public partial class FormDatPhong : Form
     {
         private int maPhong;
+        private int idPhong;
+        private int idKhach;
+        private string ngayden;
+        private string ngaydi;
+        private float gia;
         private int maPhieuDat = 0;
         public FormDatPhong()
         {
@@ -151,6 +156,43 @@ namespace QLKhachSan
             int numrow;
             numrow = e.RowIndex;
             maPhieuDat = Int32.Parse(dgvDSDat.Rows[numrow].Cells[0].Value.ToString());
+            idPhong = Int32.Parse(dgvDSDat.Rows[numrow].Cells[1].Value.ToString());
+            idKhach = Int32.Parse(dgvDSDat.Rows[numrow].Cells[2].Value.ToString());
+            ngayden = dgvDSDat.Rows[numrow].Cells[4].Value.ToString();
+            ngaydi = dgvDSDat.Rows[numrow].Cells[5].Value.ToString();
+            gia = Int32.Parse(dgvDSDat.Rows[numrow].Cells[6].Value.ToString());
+
+        }
+
+        private void btnThue_Click(object sender, EventArgs e)
+        {
+            if (maPhieuDat != 0)
+            {
+                float tongtien = 0;
+                TimeSpan time = DateTime.Parse(ngaydi) - DateTime.Parse(ngayden);               
+                double tongSoNgay = Math.Ceiling(time.TotalDays) + 1;
+                tongtien = (float)tongSoNgay * gia *2;
+
+                int c = new ThuePhongDao().addPT(new THUEPHONG { MaThue = maPhieuDat, idKhachHang = idKhach, idPhong = idPhong, NgayDi = DateTime.Parse(ngaydi), NgayDen = DateTime.Parse(ngayden), GiaTien = tongtien });
+                if (c > 0)
+                {
+                    MessageBox.Show("Thuê phòng thành công !");
+                    new ThuePhongDao().updateRoom(idPhong, "Da thue");
+                    new DatPhongDao().xoaPD(maPhieuDat);
+                    dgvDSDat.DataSource = new DatPhongDao().DSDatPhong();
+                    Load();
+
+                }
+                else
+                {
+                    MessageBox.Show("Thuê thất bại !");
+                }
+                     
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn phiếu để thuê !");
+            }
         }
     }
 }

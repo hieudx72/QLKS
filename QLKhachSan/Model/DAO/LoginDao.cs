@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QuanLyKho.Model;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,5 +23,13 @@ namespace QLKhachSan.Model.DAO
             else
                 return false;
         }
+
+        public DataTable quyen(string tenDN)
+        {
+            string str = "SELECT idChucVu FROM NHANVIEN WHERE TenDangNhap = '" + tenDN + "'";
+            DataTable da = DataProvider.Instance.ExecuteQuery(str);
+            return da;
+        }
+
     }
 }

@@ -31,6 +31,7 @@ namespace QLKhachSan.Model.DAO
             return sp;
         }
 
+        
         public bool updatePass(string tenDN, string mkmoi)
         {
             try

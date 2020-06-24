@@ -64,22 +64,50 @@ namespace QLKhachSan
 
         private void mnPhong_Click(object sender, EventArgs e)
         {
-            new FormPhong().Show();
+            if (FormLogin.quyen.Equals("admin"))
+            {
+                new FormPhong().Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa đủ quyền để thao tác !");
+            }
         }
 
         private void mnThietBiPhong_Click(object sender, EventArgs e)
         {
-            new FormThietBiPhong().Show();
+            if (FormLogin.quyen.Equals("admin"))
+            {
+                new FormThietBiPhong().Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa đủ quyền để thao tác !");
+            }
         }
 
         private void mnDichVu_Click(object sender, EventArgs e)
         {
-            new FormDichVu().Show();
+            if (FormLogin.quyen.Equals("admin"))
+            {
+                new FormDichVu().Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa đủ quyền để thao tác !");
+            }
         }
 
         private void mnNhanVien_Click(object sender, EventArgs e)
         {
-            new FormNhanVien().Show();
+            if (FormLogin.quyen.Equals("admin"))
+            {
+                new FormNhanVien().Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa đủ quyền để thao tác !");
+            }
         }
 
         private void mnThongTin_Click(object sender, EventArgs e)
@@ -94,11 +122,19 @@ namespace QLKhachSan
 
         private void mnDangXuat_Click(object sender, EventArgs e)
         {
+            this.Close();
+            new FormLogin().Show();
         }
 
         private void mnKhachHang_Click(object sender, EventArgs e)
         {
             new FormKhachHang().Show();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new FormMain().Show();
         }
     }
 }

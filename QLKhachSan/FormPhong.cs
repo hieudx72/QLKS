@@ -59,6 +59,7 @@ namespace QLKhachSan
             {
                 MessageBox.Show("Thêm thành công !");
                 dgvLoaiPhong.DataSource = new PhongDao().DSLoaiPhong();
+                Load();
             }
             else
                 MessageBox.Show("Thêm không thành công !");
@@ -77,18 +78,20 @@ namespace QLKhachSan
                 txtGia.Text = "";
 
                 dgvLoaiPhong.DataSource = new PhongDao().DSLoaiPhong();
+                Load();
             }
             else
                 MessageBox.Show("Xóa không thành công !");
         }
 
         private void btnSuaLP_Click(object sender, EventArgs e)
-        {
+        {          
             bool c = new PhongDao().updateLP(new LOAIPHONG { MaLoai = Int32.Parse(txtMaLoai.Text), TenLoai = txtTenLoai.Text, SoNguoi = Int32.Parse(txtSoNguoi.Text), Gia = float.Parse(txtGia.Text) });
             if (c)
             {
                 MessageBox.Show("Cập nhật thành công !");
                 dgvLoaiPhong.DataSource = new PhongDao().DSLoaiPhong();
+                Load();
             }
             else
             {
@@ -103,6 +106,7 @@ namespace QLKhachSan
             {
                 MessageBox.Show("Thêm thành công !");
                 dgvPhong.DataSource = new PhongDao().DSPhong();
+               
             }
             else
                 MessageBox.Show("Thêm không thành công !");

@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Mã Khách Hàng",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tên Khách Hàng",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Giới Tính ",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Ngày Sinh",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Địa Chỉ",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Số Điện Thoại",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Số CMND",
             ""}, -1);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,18 +69,18 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnDatPhong = new System.Windows.Forms.Button();
             this.lvPhong = new System.Windows.Forms.ListView();
-            this.lvKH = new System.Windows.Forms.ListView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnThue = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.dgvDSDat = new System.Windows.Forms.DataGridView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvKH = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnThue = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.dgvDSDat = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -297,82 +297,6 @@
             this.lvPhong.UseCompatibleStateImageBehavior = false;
             this.lvPhong.View = System.Windows.Forms.View.Details;
             // 
-            // lvKH
-            // 
-            this.lvKH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.lvKH.HideSelection = false;
-            this.lvKH.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem22,
-            listViewItem23,
-            listViewItem24,
-            listViewItem25,
-            listViewItem26,
-            listViewItem27,
-            listViewItem28});
-            this.lvKH.Location = new System.Drawing.Point(6, 6);
-            this.lvKH.Name = "lvKH";
-            this.lvKH.Size = new System.Drawing.Size(655, 321);
-            this.lvKH.TabIndex = 0;
-            this.lvKH.UseCompatibleStateImageBehavior = false;
-            this.lvKH.View = System.Windows.Forms.View.Details;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btnThue);
-            this.tabPage2.Controls.Add(this.btnHuy);
-            this.tabPage2.Controls.Add(this.dgvDSDat);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(667, 511);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Danh Sách";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnThue
-            // 
-            this.btnThue.Location = new System.Drawing.Point(458, 461);
-            this.btnThue.Name = "btnThue";
-            this.btnThue.Size = new System.Drawing.Size(100, 41);
-            this.btnThue.TabIndex = 3;
-            this.btnThue.Text = "Thuê";
-            this.btnThue.UseVisualStyleBackColor = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(127, 461);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(100, 41);
-            this.btnHuy.TabIndex = 2;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // dgvDSDat
-            // 
-            this.dgvDSDat.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvDSDat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSDat.Location = new System.Drawing.Point(6, 6);
-            this.dgvDSDat.Name = "dgvDSDat";
-            this.dgvDSDat.RowHeadersWidth = 51;
-            this.dgvDSDat.RowTemplate.Height = 24;
-            this.dgvDSDat.Size = new System.Drawing.Size(655, 440);
-            this.dgvDSDat.TabIndex = 0;
-            this.dgvDSDat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSDat_CellClick);
-           
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Thông Tin Khách Hàng";
-            this.columnHeader1.Width = 200;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "";
-            this.columnHeader2.Width = 420;
-            // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "";
@@ -397,6 +321,82 @@
             // 
             this.columnHeader7.Text = "Giá";
             this.columnHeader7.Width = 146;
+            // 
+            // lvKH
+            // 
+            this.lvKH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lvKH.HideSelection = false;
+            this.lvKH.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7});
+            this.lvKH.Location = new System.Drawing.Point(6, 6);
+            this.lvKH.Name = "lvKH";
+            this.lvKH.Size = new System.Drawing.Size(655, 321);
+            this.lvKH.TabIndex = 0;
+            this.lvKH.UseCompatibleStateImageBehavior = false;
+            this.lvKH.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Thông Tin Khách Hàng";
+            this.columnHeader1.Width = 200;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "";
+            this.columnHeader2.Width = 420;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnThue);
+            this.tabPage2.Controls.Add(this.btnHuy);
+            this.tabPage2.Controls.Add(this.dgvDSDat);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(667, 511);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Danh Sách";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnThue
+            // 
+            this.btnThue.Location = new System.Drawing.Point(458, 461);
+            this.btnThue.Name = "btnThue";
+            this.btnThue.Size = new System.Drawing.Size(100, 41);
+            this.btnThue.TabIndex = 3;
+            this.btnThue.Text = "Thuê";
+            this.btnThue.UseVisualStyleBackColor = true;
+            this.btnThue.Click += new System.EventHandler(this.btnThue_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(127, 461);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(100, 41);
+            this.btnHuy.TabIndex = 2;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // dgvDSDat
+            // 
+            this.dgvDSDat.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvDSDat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSDat.Location = new System.Drawing.Point(6, 6);
+            this.dgvDSDat.Name = "dgvDSDat";
+            this.dgvDSDat.RowHeadersWidth = 51;
+            this.dgvDSDat.RowTemplate.Height = 24;
+            this.dgvDSDat.Size = new System.Drawing.Size(655, 440);
+            this.dgvDSDat.TabIndex = 0;
+            this.dgvDSDat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSDat_CellClick);
             // 
             // FormDatPhong
             // 
